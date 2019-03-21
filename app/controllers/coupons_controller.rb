@@ -8,6 +8,8 @@ class CouponsController < ApplicationController
     @coupon = Coupon.find(params[:id])
   end
 
+  def new; end
+
   def create
     @coupon = Coupon.new
     @coupon[:coupon_code] = params[:coupon][:coupon_code]
@@ -16,8 +18,7 @@ class CouponsController < ApplicationController
     redirect_to coupon_path(@coupon)
   end
 
-  def new
-  end
+  
 
 
 end
